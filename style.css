@@ -35,98 +35,73 @@ body {
 	}
 }
 
-
 a {
   text-decoration: none;
 }
 
+#link{
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: .8rem;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 20px;
+  padding: 4px 16px;
+  opacity: 25%;
+  transition: opacity 1s;
+  position: absolute;
+  top: 94%;
+}
+
+#link:hover {
+  opacity: 1;
+}
 
 .title-container{
-    margin-left: 10vh;
-    margin-top: 80vh;
   height: 100vh;
   width: 100%;
   display: flex;
-
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-container{
-    text-align: center;
-    display: inline-block;
-    width: 14vh;
+  display: flex;
+  justify-content: space-between;
+  width: 640px;
 }
 
 .title-text {
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.1);;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  letter-spacing: 5px;
+  color: white;
+  margin: 8px 0px 0px 0px;
+  transition: opacity 500ms ease;
+    
+    
+-webkit-text-fill-color: rgba(255, 255, 255, 0.1);;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: white;  
   font-family: 'indivisible', sans-serif;
   font-weight: bold;
-  font-size: 8rem;
-  margin: 0px 0px -50px 0px;
+  font-size: 4rem;
+  margin: 0px 0px -10px 0px;
   transition: opacity 500ms ease;
 }
 
 .over span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
+  display: inline-block;
+transition: 2s ease-in-out;
 
 }
 
-.one span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
+#text:has(.over:hover) .title-text:not(.over:hover) {
+  opacity: 0.1;
 }
-
-.two span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
-.three span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
-.four span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
-.five span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
-.six span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
-.seven span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
-.eight span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
-.nine span {
-    display: inline-block;
-    transition: 0.5s ease-in-out;
-
-}
-
 
 .over:hover > .letter {
   background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
@@ -135,80 +110,6 @@ a {
   -webkit-text-fill-color: transparent;
   animation: background-pan 50s linear infinite;
 }
-
-.one:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.two:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.three:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.four:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.five:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.six:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.seven:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.eight:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-.nine:hover > .letter {
-  background: linear-gradient(to right, #40ffb3, #ff40fc, #40ffb3);
-  background-size: 1000%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: background-pan 50s linear infinite;
-}
-
-
 
 @keyframes background-pan {
   from {
@@ -220,88 +121,54 @@ a {
   }
 }
 
-.over:hover > .letter {
+.over:hover > .letter:nth-child(1) {
   transform: translate(-200%, 20%) rotate(10deg);
 }
 
-.one:hover > .letter {
+.over:hover > .letter:nth-child(2) {
   transform: translate(-80%, -40%) rotate(-16deg);
 }
 
-.two:hover > .letter {
+.over:hover > .letter:nth-child(3) {
   transform: translate(-60%, 60%) rotate(8deg);
 }
 
-.three:hover > .letter {
+.over:hover > .letter:nth-child(4) {
   transform: translate(-20%, -60%) rotate(20deg);
 }
 
-.four:hover > .letter {
+.over:hover > .letter:nth-child(5) {
   transform: translate(0%, 40%) rotate(20deg);
 }
 
-.five:hover > .letter {
+.over:hover > .letter:nth-child(6) {
   transform: translate(20%, -60%) rotate(-20deg);
 }
 
-.six:hover > .letter {
+.over:hover > .letter:nth-child(7) {
   transform: translate(-10%, 60%) rotate(16deg);
 }
 
-.seven:hover > .letter {
+.over:hover > .letter:nth-child(8) {
   transform: translate(20%, -60%) rotate(20deg);
 }
 
-.six:hover > .letter {
+.over:hover > .letter:nth-child(9) {
   transform: translate(40%, 30%) rotate(-20deg);
 }
 
-.seven:hover > .letter {
+.over:hover > .letter:nth-child(10) {
   transform: translate(50%, -80%) rotate(-20deg);
 }
 
-.eight:hover > .letter {
+.over:hover > .letter:nth-child(11) {
   transform: translate(100%, 10%) rotate(20deg);
 }
 
-.nine:hover > .letter {
+.over:hover > .letter:nth-child(12) {
   transform: translate(100%, -40%) rotate(20deg);
 }
 
-
-
 .over:hover > .letter{
-  transition-duration: 1s;
-}
-
-.one:hover > .letter{
-  transition-duration: 1s;
-}
-
-.three:hover > .letter{
-  transition-duration: 1s;
-}
-
-.four:hover > .letter{
-  transition-duration: 1s;
-}
-
-.five:hover > .letter{
-  transition-duration: 1s;
-}
-
-.six:hover > .letter{
-  transition-duration: 1s;
-}
-
-.seven:hover > .letter{
-  transition-duration: 1s;
-}
-
-.eight:hover > .letter{
-  transition-duration: 1s;
-}
-
-.nine:hover > .letter{
-  transition-duration: 1s;
+  transition-duration: 2s;
 }

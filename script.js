@@ -14,13 +14,7 @@ const separate = id => {
   });
 }
 
-
-separate("1");
-separate("2");
-separate("3");
-separate("4");
-separate("5");
-separate("6");
-separate("7");
-separate("8");
-separate("9");
+separate("website");
+separate("design");
+separate("draw");
+separate("tech");
