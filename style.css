@@ -88,8 +88,8 @@ a {
   -webkit-text-stroke-color: white;  
   font-family: 'indivisible', sans-serif;
   font-weight: bold;
-  font-size: 4rem;
-  margin: 0px 0px -10px 0px;
+  font-size: 3rem;
+  margin: 0px 0px 0px 0px;
   transition: opacity 500ms ease;
 }
 
